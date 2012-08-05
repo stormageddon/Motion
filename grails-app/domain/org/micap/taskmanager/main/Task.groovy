@@ -20,12 +20,12 @@ class Task implements Comparable {
 	public int compareTo(Object oTask) {
 		// TODO Auto-generated method stub
 		int result = 0
-	/*	if( this.priority.compareTo(oTask.priority) < 0 ) {
-			result = -1
-		}l
-		else {*/
+
 		if( this.priority > oTask.priority ) {
 			result = -1
+		}
+		else if( this.priority < oTask.priority ) {
+			result = 1
 		}
 		else {
 			if( this.dueDate.before(oTask.dueDate)) {
