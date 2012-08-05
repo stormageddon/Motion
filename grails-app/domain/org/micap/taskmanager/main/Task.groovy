@@ -4,7 +4,7 @@ class Task implements Comparable {
 	
 	String 	description
 	//Priority priority
-	String priority
+	int priority
 	java.util.Date	dueDate
 	
     static constraints = {
@@ -24,12 +24,16 @@ class Task implements Comparable {
 			result = -1
 		}l
 		else {*/
+		if( this.priority > oTask.priority ) {
+			result = -1
+		}
+		else {
 			if( this.dueDate.before(oTask.dueDate)) {
 				result = -1
 			} else if( this.dueDate.after(oTask.dueDate)) {
 				result = 1
 			}
-		//}
+		}
 		return result
 	}	
 }

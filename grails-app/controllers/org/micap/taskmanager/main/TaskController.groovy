@@ -20,6 +20,7 @@ class TaskController {
     }
 
     def save() {
+		System.out.println("params: " + params)
         def taskInstance = new Task(params)
         if (!taskInstance.save(flush: true)) {
             render(view: "create", model: [taskInstance: taskInstance])
@@ -112,7 +113,7 @@ class TaskController {
 		
 		Task nextTask = taskSet.first()
 		System.out.println("The next newest task is " + nextTask.description 
-			+ ", due at " + nextTask.dueDate)
+			+ ", due at " + nextTask.dueDate + " with a priority of " + nextTask.priority)
 		
 		redirect(action: "show", id: nextTask.id)
 	}

@@ -41,11 +41,13 @@
 				</li>
 				</g:if>
 			
+				Priority: ${taskInstance?.priority }
 				<g:if test="${taskInstance?.priority}">
 				<li class="fieldcontain">
 					<span id="priority-label" class="property-label"><g:message code="task.priority.label" default="Priority" /></span>
 					
 						<span class="property-value" aria-labelledby="priority-label"><g:fieldValue bean="${taskInstance}" field="priority"/></span>
+						${taskInstance?.priority }
 					
 				</li>
 				</g:if>

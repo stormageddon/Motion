@@ -23,6 +23,8 @@
 		<g:message code="task.priority.label" default="Priority" />
 		
 	</label>
-	<g:textField name="priority" value="${taskInstance?.priority}"/>
+	
+	<g:select name="priority" from="${1..10}" value="${taskInstance?.priority}"
+          noSelection="['':'-Choose priority-']"/>
 </div>
 
