@@ -13,8 +13,9 @@ class Task implements Comparable {
     }
 
 	/**
-	 * Returns true if this date is before the 
-	 * param date
+	 * Returns true if this priority is before the 
+	 * param priority, otherwise it is based on the
+	 * due date of both tasks.
 	 */
 	@Override
 	public int compareTo(Object oTask) {
